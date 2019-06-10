@@ -19,6 +19,147 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 .container {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
+}
+
+.section-title {
+    padding-left: 45px;
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:before {
+        content: '';
+        height: 1px;
+        width: 30px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #868686;
+    }
+
+    &--black {
+        color: #0d0d0d;
+    }
+}
+
+
+.banner {
+    position: relative;
+    background-color: #0d0d0d;
+    color: #fff;
+
+    .container {
+        padding: 0 0 calc(15vh + 30px);
+    }
+
+    .header {
+        margin: 0 auto;
+        padding: 35px 0 0;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-logo {
+
+        }
+
+        &-btn {
+            padding: 12px 0;
+            min-width: 160px;
+            background-color: #fff;
+            text-align: center;
+            color: #0d0d0d;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+
+    &-middle {
+        margin: 10vh auto;
+        font-size: 5vw;
+        font-weight: bold;
+        line-height: 1.3;
+    }
+
+    &-bottom {
+        margin: 0 auto;
+
+        &__wrapper {
+            display: flex;
+
+            .text {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .text + .text {
+                margin-left: 10%;
+            }
+        }
+    }
+
+    &-email {
+        width: 150px;
+        position: absolute;
+        left: 0;
+        top: calc(100% - 120px);
+        display: inline-block;
+        transform: rotate(-90deg);
+        font-size: 14px;
+    }
+}
+
+
+
+.offer {
+    padding: 10vh 0;
+    background-color: #fff;
+
+    .section-title {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+.works {
+
+    .section-title {
+
+    }
+}
+
+
+
+.stats {
+
+    .section-title {
+        
+    }
+}
+
+
+
+.clients {
+
+    .section-title {
+        
+    }
+}
+
+
+
+.contact {
+
+    .section-title {
+        
+    }
 }
