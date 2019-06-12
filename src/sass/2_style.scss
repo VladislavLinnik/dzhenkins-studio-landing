@@ -264,6 +264,7 @@ body {
     }
 
     &-list {
+        margin-bottom: 60px;
         display: flex;
         flex-wrap: wrap;
         border: 1px solid #979797;
@@ -289,13 +290,120 @@ body {
             max-width: 100%;
         }
     }
+
+    &-reviews {
+
+        .review {
+
+            &-text {
+                margin-bottom: 40px;
+                padding-right: 20%;
+                color: #0d0d0d;
+                font-size: 30px;
+                line-height: 1.5;
+            }
+
+            &-author {
+                margin-bottom: 50px;
+                font-size: 16px;
+                color: #0d0d0d;
+
+                .name {
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+
+                .position {
+                    font-weight: normal;
+                }
+            }
+
+            &-nav {
+                color: #0d0d0d;
+                font-size: 18px;
+
+                .prev-slide,
+                .next-slide {
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+
+                .prev-slide {
+                    transform: rotate(180deg);
+                }
+
+                .slide-number {
+                    margin-left: 60px;
+                    margin-right: 60px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
 }
 
 
 
 .contact {
+    padding: 15vh 0 10vh;
+    background-color: #0d0d0d;
+    color: #fff;
 
     .section-title {
+        margin-bottom: 60px;
+    }
+
+    &-title {
+        margin-bottom: 120px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__data {
+            
+            & > * {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        &__actions {
+            height: 160px;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            border-top: solid 1px #979797;
+            border-bottom: solid 1px #979797;
         
+            .action {
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+                text-transform: uppercase;
+
+                &:first-child {
+                    margin-right: 15%;
+                }
+
+                &:after {
+                    content: '';
+                    height: 3px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #fff;
+                }
+            }
+        }
     }
 }

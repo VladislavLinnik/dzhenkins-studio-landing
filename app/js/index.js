@@ -7,6 +7,11 @@ $(document).ready(function(){
             });
         }
     });
+
+    $('.js-reviewsSlider').slick({
+        prevArrow: $('.prev-slide'),
+        nextArrow: $('.next-slide'),
+    });
     
 
 });
