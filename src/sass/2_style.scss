@@ -21,6 +21,10 @@ body {
 .container {
     width: 70%;
     margin: 0 auto;
+
+    @media (max-width: 900px) {
+        width: 80%;
+    }
 }
 
 .section-title {
@@ -31,6 +35,23 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
 
+    @media (max-width: 800px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 500px) {
+        padding-left: 35px;
+        font-size: 12px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 10px;
+    }
+
     &:before {
         content: '';
         height: 1px;
@@ -40,6 +61,10 @@ body {
         top: 50%;
         transform: translateY(-50%);
         background-color: #868686;
+
+        @media (max-width: 500px) {
+            width: 20px;
+        }
     }
 
     &--black {
@@ -55,6 +80,10 @@ body {
 
     .container {
         padding: 0 0 calc(15vh + 30px);
+
+        @media (max-width: 900px) {
+            width: 70%;
+        }
     }
 
     .header {
@@ -95,13 +124,26 @@ body {
         &__wrapper {
             display: flex;
 
+            @media (max-width: 700px) {
+                flex-direction: column;
+            }
+
             .text {
                 font-size: 16px;
                 line-height: 1.5;
+
+                @media (max-width: 900px) {
+                    font-size: 14px;
+                }
             }
 
             .text + .text {
                 margin-left: 10%;
+
+                @media (max-width: 700px) {
+                    margin-top: 15px;
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -113,7 +155,15 @@ body {
         top: calc(100% - 120px);
         display: inline-block;
         transform: rotate(-90deg);
-        font-size: 14px;
+        font-size: 2vw;
+
+        @media (max-width: 500px) {
+            width: auto;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3vw;
+        }
     }
 }
 
@@ -125,6 +175,10 @@ body {
 
     .section-title {
         margin-bottom: 100px;
+
+        @media (max-width: 900px) {
+            margin-bottom: 50px;
+        }
     }
 
     .list {
@@ -136,6 +190,14 @@ body {
             margin-right: 6%;
             width: 44%;
 
+            @media (max-width: 900px) {
+                width: 100%;
+            }
+
+            @media (max-width: 700px) {
+                margin-bottom: 45px;
+            }
+
             &-title {
                 margin-bottom: 15px;
                 position: relative;
@@ -143,14 +205,23 @@ body {
                 font-size: 28px;
                 font-weight: bold;
 
+                @media (max-width: 700px) {
+                    margin-bottom: 10px;
+                    font-size: 22px;
+                }
+
                 &:before {
                     content: '';
                     position: absolute;
-                    bottom: 5px;
+                    top: -100%;
                     left: 0;
                     color: #0d0d0d;
                     font-size: 60px;
                     opacity: .2;
+
+                    @media (max-width: 700px) {
+                        font-size: 7vw;
+                    }
                 }
             }
 
@@ -158,6 +229,10 @@ body {
                 color: #000;
                 font-size: 16px;
                 line-height: 1.5;
+
+                @media (max-width: 700px) {
+                    font-size: 14px;
+                }
             }
 
             &:nth-child(1) .item-title:before {
@@ -186,14 +261,34 @@ body {
 
     .section-title {
         margin-bottom: 60px;
+
+        @media (max-width: 900px) {
+            margin-bottom: 30px;
+        }
     }
 
     .projects {
         display: flex;
 
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+
+        a {
+
+            @media (max-width: 700px) {
+                margin-bottom: 10px;
+                display: block;
+            }
+        }
+
         .left {
             width: calc(50% - 30px);
             margin-right: 30px;
+
+            @media (max-width: 700px) {
+                width: 100%;
+            }
 
             img {
                 max-width: 100%;
@@ -207,9 +302,17 @@ body {
             flex-direction: column;
             justify-content: space-between;
 
+            @media (max-width: 700px) {
+                width: 100%;
+            }
+
             img {
                 max-width: 90%;
                 border-radius: 15px;
+
+                @media (max-width: 700px) {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -223,6 +326,10 @@ body {
 
     .section-title {
         margin-bottom: 80px;
+
+        @media (max-width: 900px) {
+            margin-bottom: 40px;
+        }
     }
 
     &-list {
@@ -230,25 +337,54 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         color: #fff;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &-item {
         position: relative;
         text-align: center;
 
+        @media (max-width: 800px) {
+            width: 100px;
+        }
+        
+        &:not(:last-child) {
+
+            @media (max-width: 800px) {
+                margin-bottom: 25px;
+            }
+        }
+
         .number {
-            font-size: 80px;
+            font-size: 5vw;
+
+            @media (max-width: 800px) {
+                font-size: 8vw;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 40px;
+            }
         }
 
         .text {
-            font-size: 16px;
+            font-size: 14px;
+            line-height: 1.4;
+
+            @media (max-width: 800px) {
+                font-size: 16px;
+            }
         }
 
         .sign {
             position: absolute;
             top: 0;
             left: 100%;
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 }
@@ -261,6 +397,10 @@ body {
 
     .section-title {
         margin-bottom: 80px;
+
+        @media (max-width: 900px) {
+            margin-bottom: 40px;
+        }
     }
 
     &-list {
@@ -278,16 +418,49 @@ body {
         justify-content: center;
         border-right: 1px solid #979797;
 
+        @media (max-width: 700px) {
+            padding: 10px;
+            min-height: 130px;
+            width: 50%;
+            border-bottom: 1px solid #979797;
+        }
+
         &:nth-child(5n) {
             border: none;
+
+            @media (max-width: 700px) {
+                border-right: 1px solid #979797;
+            }
         }
 
         &:nth-child(-n + 5){
             border-bottom: 1px solid #979797;
+
+            @media (max-width: 700px) {
+                border-bottom: 1px solid #979797;
+            }
+        }
+
+        &:nth-last-child(-n + 2) {
+
+            @media (max-width: 700px) {
+                border-bottom: none;
+            }
+        }
+
+        &:nth-child(even) {
+
+            @media (max-width: 700px) {
+                border-right: none;
+            }
         }
 
         &__img {
             max-width: 100%;
+
+            @media (max-width: 700px) {
+                max-width: 70%;
+            }
         }
     }
 
@@ -301,12 +474,23 @@ body {
                 color: #0d0d0d;
                 font-size: 30px;
                 line-height: 1.5;
+
+                @media (max-width: 700px) {
+                    margin-bottom: 20px;
+                    padding-right: 0;
+                    font-size: 3vw;
+                }
             }
 
             &-author {
                 margin-bottom: 50px;
                 font-size: 16px;
                 color: #0d0d0d;
+
+                @media (max-width: 700px) {
+                    margin-bottom: 30px;
+                    font-size: 14px;
+                }
 
                 .name {
                     margin-bottom: 5px;
@@ -322,6 +506,10 @@ body {
                 color: #0d0d0d;
                 font-size: 18px;
 
+                @media (max-width: 700px) {
+                    font-size: 16px;
+                }
+
                 .prev-slide,
                 .next-slide {
                     background-color: transparent;
@@ -336,6 +524,11 @@ body {
                     margin-left: 60px;
                     margin-right: 60px;
                     display: inline-block;
+
+                    @media (max-width: 700px) {
+                        margin-left: 40px;
+                        margin-right: 40px;
+                    }
                 }
             }
         }
@@ -351,12 +544,29 @@ body {
 
     .section-title {
         margin-bottom: 60px;
+
+        @media (max-width: 900px) {
+            margin-bottom: 30px;
+        }
     }
 
     &-title {
         margin-bottom: 120px;
         font-size: 40px;
         font-weight: bold;
+
+        @media (max-width: 800px) {
+            margin-bottom: 60px;
+            font-size: 28px;    
+        }
+
+        @media (max-width: 600px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 18px) {
+            font-size: 18px;
+        }
     }
 
     &-info {
@@ -364,10 +574,28 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+
         &__data {
+
+            @media (max-width: 800px) {
+                margin-bottom: 20px;
+                align-self: flex-start;
+            }
             
             & > * {
                 display: block;
+                font-size: 18px;
+
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 14px;
+                }
 
                 &:not(:last-child) {
                     margin-bottom: 12px;
@@ -382,7 +610,17 @@ body {
             align-items: center;
             border-top: solid 1px #979797;
             border-bottom: solid 1px #979797;
-        
+
+            @media (max-width: 800px) {
+                height: 120px;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            @media (max-width: 600px) {
+                height: 80px;
+            }
+            
             .action {
                 height: 100%;
                 position: relative;
@@ -391,8 +629,24 @@ body {
                 font-size: 24px;
                 text-transform: uppercase;
 
+                @media (max-width: 800px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 12px;
+                }
+
                 &:first-child {
                     margin-right: 15%;
+
+                    @media (max-width: 800px) {
+                        margin-right: 0;
+                    }
                 }
 
                 &:after {
