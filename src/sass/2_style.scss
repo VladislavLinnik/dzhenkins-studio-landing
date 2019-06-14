@@ -74,6 +74,7 @@ body {
 
 
 .banner {
+    height: 100vh;
     position: relative;
     background-color: #0d0d0d;
     color: #fff;
@@ -117,10 +118,14 @@ body {
         &__text {
             font-size: 5vw;
             font-weight: bold;
-            text-shadow: -1px -1px 1px #fff;
+            // text-shadow: -1px -1px 1px #fff;
             // text-shadow: -1px 0 #FFF, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
             letter-spacing: -3.85px;
             line-height: normal;
+
+            @media (max-width: 500px) {
+                font-size: 8vw;
+            }
         }
     }
 
@@ -547,10 +552,19 @@ body {
 .contact {
     // padding: 15vh 0 10vh;
     height: 100vh;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     background-color: #0d0d0d;
     color: #fff;
+
+    .container {
+        padding: 15vh 0 10vh;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+    }
 
     .section-title {
         margin-bottom: 60px;
@@ -561,7 +575,7 @@ body {
     }
 
     &-title {
-        margin-bottom: 120px;
+        margin-bottom: 100px;
         font-size: 40px;
         font-weight: bold;
 
@@ -667,6 +681,22 @@ body {
                     bottom: 0;
                     background-color: #fff;
                 }
+            }
+        }
+    }
+
+    &-social {
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+        display: flex;
+        justify-content: flex-end;
+
+        &__link {
+            font-size: 16px;
+
+            &:not(:last-child) {
+                margin-right: 10vw;
             }
         }
     }
