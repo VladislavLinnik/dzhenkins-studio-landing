@@ -117,6 +117,8 @@ body {
         &__text {
             font-size: 5vw;
             font-weight: bold;
+            text-shadow: -1px -1px 1px #fff;
+            // text-shadow: -1px 0 #FFF, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
             letter-spacing: -3.85px;
             line-height: normal;
         }
@@ -543,7 +545,10 @@ body {
 
 
 .contact {
-    padding: 15vh 0 10vh;
+    // padding: 15vh 0 10vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
     background-color: #0d0d0d;
     color: #fff;
 
@@ -553,10 +558,6 @@ body {
         @media (max-width: 900px) {
             margin-bottom: 30px;
         }
-    }
-
-    .container {
-        width: 90%;
     }
 
     &-title {
