@@ -40,12 +40,12 @@
 </head>
 <body>
 
-	<div class="preloader">
+	<!-- <div class="preloader">
 		<div class="loading">
 			<div class="preloader-bounceball"></div>
 			<div class="preloader-text">NOW LOADING</div>
 		</div>
-	</div>
+	</div> -->
 
 	<section class="banner">
 		<div class="header">
@@ -286,8 +286,8 @@
 
 
 	<!-- popup -->
-<div class="popup_overlay"></div>
-<div class="popup">
+<div class="popup_overlay" style="display: block;"></div>
+<div class="popup" style="display: block;">
 	<div class="container">
 		<div class="section-title">Let us create t6he best project in your niche</div>
 		<div class="popup-info">
@@ -302,7 +302,7 @@
 					<input type="text" class="form-group-input" placeholder="Name of your company">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-group-input" placeholder="Email address">
+					<input type="text" class="form-group-input form-group-input--email" placeholder="Email address">
 				</div>
 				<div class="form-group">
 					<h3>How did you find out about us?</h3>
@@ -317,7 +317,8 @@
 					<textarea class="form-group-textarea" placeholder="Tell about your project"></textarea>
 				</div>
 				<div class="form-group">
-					<input class="form-group-files" type="file" placeholder="ATTACH FILES">
+					<label class="form-group-files-block" for="file">Attach Files</label>
+					<input class="form-group-files" id="file" type="file" placeholder="ATTACH FILES">
 				</div>
 				<div class="form-group">
 					<input class="form-group-submit" type="submit" value="Submit">
@@ -330,6 +331,7 @@
 			<a href="#" class="popup-social__link">Behance</a>
 		</div>
 	</div>
+	<div class="popup-close">&#10006;</div>
 </div>
 <!-- popup end -->
 
