@@ -17,7 +17,7 @@
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
 	<!-- FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap" rel="stylesheet"
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap" rel="stylesheet">
 
 	<!-- STYLES -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -40,18 +40,25 @@
 </head>
 <body>
 
+	<div class="preloader">
+		<div class="loading">
+			<div class="preloader-bounceball"></div>
+			<div class="preloader-text">NOW LOADING</div>
+		</div>
+	</div>
+
 	<section class="banner">
 		<div class="header">
 			<div class="header-logo">
 				<img src="./img/logo_white.svg" alt="">
 			</div>
-			<button class="header-btn" type="button">Start a project</button>
+			<button class="header-btn js-startProject" type="button">Start a project</button>
 		</div>
 		<div class="container">
 			<div class="banner-middle">
-				<p class="banner-middle__text">
+				<h1 class="banner-middle__text">
 					We create top-notch and exclusive solutions for your business
-				</p>
+				</h1>
 			</div>
 			<div class="banner-bottom">
 				<div class="banner-bottom__wrapper">
@@ -276,6 +283,55 @@
 			</div>
 		</div>
 	</section>
+
+
+	<!-- popup -->
+<div class="popup_overlay"></div>
+<div class="popup">
+	<div class="container">
+		<div class="section-title">Let us create t6he best project in your niche</div>
+		<div class="popup-info">
+			<div class="popup-info__data">
+				<a href="mailto:hello@dzhenkins.com">hello@dzhenkins.com</a>
+				<a href="tel:+380686918228">+38 (068) 69 18 228</a>
+				<address>Kharkiv, UA</address>
+			</div>
+			<div class="popup-info__form">
+				<div class="form-group">
+					<input type="text" class="form-group-input" placeholder="Your name">
+					<input type="text" class="form-group-input" placeholder="Name of your company">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-group-input" placeholder="Email address">
+				</div>
+				<div class="form-group">
+					<h3>How did you find out about us?</h3>
+					<select placeholder="choose" class="form-group-select">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<textarea class="form-group-textarea" placeholder="Tell about your project"></textarea>
+				</div>
+				<div class="form-group">
+					<input class="form-group-files" type="file" placeholder="ATTACH FILES">
+				</div>
+				<div class="form-group">
+					<input class="form-group-submit" type="submit" value="Submit">
+				</div>
+			</div>
+		</div>
+		<div class="popup-social">
+			<a href="#" class="popup-social__link">Instagram</a>
+			<a href="#" class="popup-social__link">Dribbble</a>
+			<a href="#" class="popup-social__link">Behance</a>
+		</div>
+	</div>
+</div>
+<!-- popup end -->
 
 
 

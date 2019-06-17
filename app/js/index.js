@@ -1,3 +1,11 @@
+$(window).on('load', function(){
+
+    setTimeout(function(){
+        $('.preloader').addClass('preloader--hidden');
+    }, 1000);
+    
+});
+
 $(document).ready(function(){
 
     $('.stats-list').viewportChecker({
@@ -13,5 +21,10 @@ $(document).ready(function(){
         nextArrow: $('.next-slide'),
     });
     
-
+    $('.js-startProject').click(function(){
+        $('.popup, .popup_overlay').fadeIn(400); //показываем всплывающее окно
+    });
+    $('.popup-close, .popup_overlay').click(function(){
+        $('.popup, .popup_overlay').fadeOut(400); //скрываем всплывающее окно
+    });
 });
