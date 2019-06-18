@@ -52,7 +52,10 @@
 			<div class="header-logo">
 				<img src="./img/logo_white.svg" alt="">
 			</div>
-			<button class="header-btn js-startProject" type="button">Start a project</button>
+			<div class="header-btn">
+				<button class="btn js-startProjectPopup" type="button">Start a project</button>
+				<div class="ease"></div>
+			</div>
 		</div>
 		<div class="container">
 			<div class="banner-middle">
@@ -286,8 +289,8 @@
 
 
 	<!-- popup -->
-<div class="popup_overlay" style="display: block;"></div>
-<div class="popup" style="display: block;">
+<div class="popup_overlay"></div>
+<div class="popup">
 	<div class="container">
 		<div class="section-title">Let us create t6he best project in your niche</div>
 		<div class="popup-info">
@@ -306,7 +309,8 @@
 				</div>
 				<div class="form-group">
 					<h3>How did you find out about us?</h3>
-					<select placeholder="choose" class="form-group-select">
+					<select class="form-group-select">
+						<option value="hide">Choose</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
