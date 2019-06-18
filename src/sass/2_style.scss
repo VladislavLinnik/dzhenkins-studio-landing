@@ -93,7 +93,7 @@ body {
     }
 
     &-text {
-        color: #fbae17;
+        color: #fff;
         display: inline-block;
         margin-left: 5px;
     }
@@ -112,7 +112,7 @@ body {
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            background-color: #fbae17;
+            background-color: #fff;
             transform-origin: 50%;
             animation: bounce 500ms alternate infinite ease;
         }
@@ -179,8 +179,7 @@ body {
             text-transform: uppercase;
             border: 1px solid transparent;
             cursor: pointer;
-            overflow: hidden;
-            transition: all .3s;
+            transition: all .2s cubic-bezier(.55,.085,.68,.53);
             z-index: 2;
             
             span {
@@ -813,6 +812,33 @@ body {
 
         &__link {
             font-size: 16px;
+            transform: translate3d(0px, 0%, 0px);
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+
+            .roll {
+                position: relative;
+                white-space: nowrap;
+                transition: transform .35s;
+            }
+
+            .roll-hover {
+                position: relative;
+                white-space: nowrap;
+                transform: translateY(105%);
+                transition: transform .35s;
+            }
+
+            &:hover {
+
+                .roll {
+                    transform: translateY(-105%);
+                }
+
+                .roll-hover {
+                    transform: translateY(-105%);
+                }
+            }
 
             &:not(:last-child) {
                 margin-right: 10vw;
@@ -1058,6 +1084,7 @@ body {
 
                         &:hover {
                             background: $select-color;
+                            color: #000;
                         }
 
                         &[rel="hide"] {
@@ -1118,7 +1145,9 @@ body {
                 &-submit {
                     padding: 15px 0;
                     min-width: 160px;
+                    position: relative;
                     color: #0d0d0d;
+                    background-color: #fff;
                     font-family: inherit;
                     font-size: 14px;
                     font-weight: 500;
@@ -1126,12 +1155,42 @@ body {
                     text-transform: uppercase;
                     border: 1px solid transparent;
                     cursor: pointer;
-                    transition: all .3s;
+                    transition: all .2s cubic-bezier(.55,.085,.68,.53);
+                    z-index: 2;
+                    
+                    span {
+                        display: inline-block;
+                        padding: 3px 0;
+                        will-change: color;
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        bottom: 0;
+                        background-color: #fff;
+                        will-change: transform, background-color;
+                        transform: scaleX(0);
+                        transform-origin: 100% 50%;
+                        transition: transform .35s;
+                        transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+                    }
 
                     &:hover {
-                        background-color: transparent;
                         color: #fff;
                         border: 1px solid #fff;
+
+                        &::before {
+                            background-color: #000;
+                            transform: scaleX(1);
+                            transform-origin: 0 50%;
+                            transition-timing-function: ease;
+                        }
                     }
 
                     @media (max-width: 600px) {
@@ -1157,6 +1216,33 @@ body {
 
         &__link {
             font-size: 16px;
+            transform: translate3d(0px, 0%, 0px);
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+
+            .roll {
+                position: relative;
+                white-space: nowrap;
+                transition: transform .35s;
+            }
+
+            .roll-hover {
+                position: relative;
+                white-space: nowrap;
+                transform: translateY(105%);
+                transition: transform .35s;
+            }
+
+            &:hover {
+
+                .roll {
+                    transform: translateY(-105%);
+                }
+
+                .roll-hover {
+                    transform: translateY(-105%);
+                }
+            }
 
             &:not(:last-child) {
                 margin-right: 10vw;
